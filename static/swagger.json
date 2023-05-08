@@ -1,0 +1,727 @@
+{
+  "info": {
+    "description": "Minh",
+    "version": "1.0.0",
+    "title": "Tearcher Bill",
+    "contact": {
+      "email": "minhdt2808@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/get_teacher": {
+      "get": {
+        "tags": [
+          "Giáo viên"
+        ],
+        "summary": "Get teacher",
+        "operationId": "getTeacher",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "available",
+              "enum": [
+                "available",
+                "pending",
+                "sold"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/create_teacher": {
+      "post": {
+        "tags": [
+          "Giáo viên"
+        ],
+        "summary": "Create teacher",
+        "operationId": "createTeacher",
+        "parameters": [
+          {
+            "name": "tenGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idBangCap",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/update_teacher/{id}": {
+      "put": {
+        "tags": [
+          "Giáo viên"
+        ],
+        "summary": "Update teacher",
+        "operationId": "updateTeacher",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tenGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idBangCap",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/delete_teacher/{id}": {
+      "delete": {
+        "tags": [
+          "Giáo viên"
+        ],
+        "summary": "Delete teacher",
+        "operationId": "deleteTeacher",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/get_degree": {
+      "get": {
+        "tags": [
+          "Bằng cấp"
+        ],
+        "summary": "Get degree",
+        "operationId": "getDegree",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "available",
+              "enum": [
+                "available",
+                "pending",
+                "sold"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/create_degree": {
+      "post": {
+        "tags": [
+          "Bằng cấp"
+        ],
+        "summary": "Create degree",
+        "operationId": "createDegree",
+        "parameters": [
+          {
+            "name": "bangCap",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "heSoGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/update_degree/{id}": {
+      "put": {
+        "tags": [
+          "Bằng cấp"
+        ],
+        "summary": "Update degree",
+        "operationId": "updateDegree",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bangCap",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "heSoGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/delete_degree/{id}": {
+      "delete": {
+        "tags": [
+          "Bằng cấp"
+        ],
+        "summary": "Delete degree",
+        "operationId": "deleteDegree",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/get_class": {
+      "get": {
+        "tags": [
+          "Lớp học"
+        ],
+        "summary": "Get class",
+        "operationId": "getClass",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "available",
+              "enum": [
+                "available",
+                "pending",
+                "sold"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+},
+    "/create_class": {
+      "post": {
+        "tags": [
+          "Lớp học"
+        ],
+        "summary": "Create degree",
+        "operationId": "createDegree",
+        "parameters": [
+          {
+            "name": "tenLopHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "soSinhVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "heSoLopHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/update_class/{id}": {
+      "put": {
+        "tags": [
+          "Lớp học"
+        ],
+        "summary": "Update class",
+        "operationId": "updateClass",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tenLopHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "soSinhVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "heSoLopHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/delete_class/{id}": {
+      "delete": {
+        "tags": [
+          "Lớp học"
+        ],
+        "summary": "Delete class",
+        "operationId": "deleteClass",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/get_course": {
+      "get": {
+        "tags": [
+          "Môn học"
+        ],
+        "summary": "Get course",
+        "operationId": "getCourse",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "available",
+              "enum": [
+                "available",
+                "pending",
+                "sold"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+},
+    "/create_course": {
+      "post": {
+        "tags": [
+          "Môn học"
+        ],
+        "summary": "Create course",
+        "operationId": "createCourse",
+        "parameters": [
+          {
+            "name": "tenMonHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "heSoMonHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/update_course/{id}": {
+      "put": {
+        "tags": [
+          "Môn học"
+        ],
+        "summary": "Update course",
+        "operationId": "updateCourse",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tenMonHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "heSoMonHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/delete_course/{id}": {
+      "delete": {
+        "tags": [
+          "Môn học"
+        ],
+        "summary": "Delete course",
+        "operationId": "deleteCourse",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/get_money": {
+      "get": {
+        "tags": [
+          "Tiền dạy"
+        ],
+        "summary": "Get money",
+        "operationId": "getMoney",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "available",
+              "enum": [
+                "available",
+                "pending",
+                "sold"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+},
+    "/create_money": {
+      "post": {
+        "tags": [
+          "Tiền dạy"
+        ],
+        "summary": "Create money",
+        "operationId": "createMoney",
+        "parameters": [
+          {
+            "name": "idGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "idMonHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "idLopHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "soTiet",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "tienDayMotGio",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/update_money/{id}": {
+      "put": {
+        "tags": [
+          "Tiền dạy"
+        ],
+        "summary": "Update money",
+        "operationId": "updateMoney",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idGiaoVien",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "idMonHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "idLopHoc",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "soTiet",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "tienDayMotGio",
+            "in": "formData",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    },
+    "/delete_money/{id}": {
+      "delete": {
+        "tags": [
+          "Tiền dạy"
+        ],
+        "summary": "Delete money",
+        "operationId": "deleteMoney",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          }
+        }
+      }
+    }
+  }
+}
